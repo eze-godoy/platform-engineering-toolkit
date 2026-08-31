@@ -18,12 +18,12 @@ repos:
       - id: requirements-txt-fixer
 
   - repo: https://github.com/psf/black
-    rev: 25.9.0
+    rev: 26.5.1
     hooks:
       - id: black
 
   - repo: https://github.com/pycqa/isort
-    rev: 7.0.0
+    rev: 9.0.1
     hooks:
       - id: isort
         args: ["--profile", "black"]
@@ -35,14 +35,14 @@ repos:
         args: ["--max-line-length=88", "--ignore=E203,W503"]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.18.2
+    rev: v2.3.1
     hooks:
       - id: mypy
         additional_dependencies: []
         # Add specific type stubs as needed: types-boto3, types-requests, types-PyYAML, etc.
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.8.6
+    rev: 1.9.4
     hooks:
       - id: bandit
         args: ["-r", "src/", "-ll"]  # Only medium and high severity
